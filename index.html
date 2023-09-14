@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Découverte d'Idées</title>
+</head>
+
+<body>
+
+    <!-- Bouton Ajouter une Idée -->
+    <button id="btn-ajouter-idee" onclick="afficherModalIdee()">Ajouter une Idée</button>
+
+    <div id="liste-idees">
+        <!-- Exemple d'idée -->
+        <div class="idee" data-id="1" onclick="voirIdee(this)">
+            <h3>Titre de l'Idée</h3>
+            <p>Description courte de l'idée...</p>
+        </div>
+        <!-- D'autres idées seront ajoutées dynamiquement ici -->
+    </div>
+
+    <!-- Vue Détails de l'Idée -->
+    <div id="details-idee" class="cache">
+        <button id="back-btn" onclick="retournerAListe()">Retour</button>
+        <h2 id="titre-idee"></h2>
+        <p id="description-idee"></p>
+        <div id="commentaires">
+            <!-- Les commentaires seront ajoutés ici -->
+        </div>
+        <input type="text" id="input-commentaire" placeholder="Ajouter un commentaire...">
+        <button onclick="ajouterCommentaire()">Valider</button>
+    </div>
+
+    <!-- Modal Soumission d'Idée -->
+    <div id="modal-idee" class="modal cache">
+        <div class="contenu-modal">
+            <span class="btn-fermer" onclick="cacherModalIdee()">&times;</span>
+            <h2>Soumettre Votre Idée</h2>
+            <!-- Dans #modal-idee .contenu-modal -->
+            <input type="text" id="input-titre-idee" placeholder="Le titre de votre idée...">
+            <textarea id="input-description-idee" placeholder="Décrivez votre idée..."></textarea>
+            <input type="file" id="input-image" accept="image/*">
+            <input type="text" id="input-tags" placeholder="Tags (séparés par des virgules)">
+            <button onclick="soumettreIdee()">Valider</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

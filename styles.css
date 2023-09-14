@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.cache {
+    display: none;
+}
+
+.idee {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+#details-idee {
+    margin-top: 20px;
+}
+
+#commentaires {
+    margin-top: 20px;
+}
+
+#input-commentaire {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+/* ... */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1;
+}
+
+.contenu-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    width: 70%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.btn-fermer {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* ... code existant ... */
+
+.tag {
+    background-color: #e0e0e0;
+    padding: 5px 10px;
+    margin: 0 5px 5px 0;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.tags {
+    margin-top: 10px;
+}
+
+.idee img {
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+/* ... */
+#back-btn {
+    background-color: #f4f4f4;
+    border: none;
+    padding: 8px 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#back-btn:hover {
+    background-color: #e0e0e0;
+}
